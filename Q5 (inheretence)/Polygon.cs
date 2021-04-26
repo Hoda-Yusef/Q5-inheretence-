@@ -39,6 +39,28 @@ namespace Q5__inheretence_
             return points;
         }
 
+        public float scope_polygon()
+        {
+            float scope_total=0;
+
+            for(int i=0;i<4;i++)
+            {
+                scope_total += (float)Math.Sqrt((this.polygon_points[i].getX() - this.polygon_points[i + 1].getX()) * (this.polygon_points[i].getX() - this.polygon_points[i + 1].getX()) + (this.polygon_points[i].getY() - this.polygon_points[i + 1].getY() * (this.polygon_points[i].getY() - this.polygon_points[i + 1].getY())));
+                
+            }
+
+            return scope_total;
+        }
+
+        public void move_points_polygon(int x,int y)
+        {
+            for(int i=0;i<5;i++)
+            {
+                this.polygon_points[i].setX(x+this.polygon_points[i].getX());
+                this.polygon_points[i].setY(y + this.polygon_points[i].getY());
+            }
+        }
+
         public void set_polygonX(int x)
         {
             this.polygon_points[numOfPoints] = new Point(0, 0);

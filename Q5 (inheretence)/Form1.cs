@@ -162,6 +162,7 @@ namespace Q5__inheretence_
                     panel8.Show();
                     panel9.Show();
                     MessageBox.Show("מצולע הושלם ");
+                    scope_polygon_display.Text = "Result :\n" + poly1.scope_polygon();
                 }
                 else
                 {
@@ -179,6 +180,19 @@ namespace Q5__inheretence_
         private void button3_Click(object sender, EventArgs e)
         {
             toString_polygon_dispaly.Text = ""+poly1.ToString_polygon();
+        }
+
+        private void polygon_move_points_Click(object sender, EventArgs e)
+        {
+            if (polygon_moveX.Value >= 0 && polygon_moveY.Value >= 0)
+            {
+                int x = Convert.ToInt32(polygon_moveX.Value);
+                int y = Convert.ToInt32(polygon_moveY.Value);
+
+                poly1.move_points_polygon(x, y);
+            }
+            else
+                MessageBox.Show("ערכים שליליים");
         }
     }  
     

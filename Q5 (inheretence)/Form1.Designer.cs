@@ -105,17 +105,16 @@ namespace Q5__inheretence_
             this.button3 = new System.Windows.Forms.Button();
             this.label38 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.polygon_move_points = new System.Windows.Forms.Button();
             this.label39 = new System.Windows.Forms.Label();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.polygon_moveY = new System.Windows.Forms.NumericUpDown();
             this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.polygon_moveX = new System.Windows.Forms.NumericUpDown();
             this.label42 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
             this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
+            this.scope_polygon_display = new System.Windows.Forms.Label();
             this.points_amount_display = new System.Windows.Forms.Label();
             this.polygon_color = new System.Windows.Forms.TextBox();
             this.polygon_thick = new System.Windows.Forms.NumericUpDown();
@@ -154,8 +153,8 @@ namespace Q5__inheretence_
             this.Polygon.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.polygon_moveY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.polygon_moveX)).BeginInit();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.polygon_thick)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.polygon_pointY)).BeginInit();
@@ -985,10 +984,10 @@ namespace Q5__inheretence_
             // 
             this.toString_polygon_dispaly.BackColor = System.Drawing.Color.White;
             this.toString_polygon_dispaly.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.toString_polygon_dispaly.Location = new System.Drawing.Point(66, 187);
+            this.toString_polygon_dispaly.Location = new System.Drawing.Point(49, 184);
             this.toString_polygon_dispaly.Name = "toString_polygon_dispaly";
             this.toString_polygon_dispaly.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toString_polygon_dispaly.Size = new System.Drawing.Size(149, 230);
+            this.toString_polygon_dispaly.Size = new System.Drawing.Size(187, 230);
             this.toString_polygon_dispaly.TabIndex = 20;
             // 
             // button3
@@ -1016,12 +1015,12 @@ namespace Q5__inheretence_
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.SkyBlue;
-            this.panel8.Controls.Add(this.button4);
+            this.panel8.Controls.Add(this.polygon_move_points);
             this.panel8.Controls.Add(this.label39);
-            this.panel8.Controls.Add(this.numericUpDown4);
+            this.panel8.Controls.Add(this.polygon_moveY);
             this.panel8.Controls.Add(this.label40);
             this.panel8.Controls.Add(this.label41);
-            this.panel8.Controls.Add(this.numericUpDown5);
+            this.panel8.Controls.Add(this.polygon_moveX);
             this.panel8.Controls.Add(this.label42);
             this.panel8.Location = new System.Drawing.Point(289, 0);
             this.panel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1030,16 +1029,17 @@ namespace Q5__inheretence_
             this.panel8.TabIndex = 43;
             this.panel8.Visible = false;
             // 
-            // button4
+            // polygon_move_points
             // 
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(83, 484);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(114, 43);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "הזז";
-            this.button4.UseVisualStyleBackColor = true;
+            this.polygon_move_points.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.polygon_move_points.Location = new System.Drawing.Point(83, 484);
+            this.polygon_move_points.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.polygon_move_points.Name = "polygon_move_points";
+            this.polygon_move_points.Size = new System.Drawing.Size(114, 43);
+            this.polygon_move_points.TabIndex = 14;
+            this.polygon_move_points.Text = "הזז";
+            this.polygon_move_points.UseVisualStyleBackColor = true;
+            this.polygon_move_points.Click += new System.EventHandler(this.polygon_move_points_Click);
             // 
             // label39
             // 
@@ -1051,14 +1051,14 @@ namespace Q5__inheretence_
             this.label39.TabIndex = 13;
             this.label39.Text = "כמה להזיז";
             // 
-            // numericUpDown4
+            // polygon_moveY
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(178, 264);
-            this.numericUpDown4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.numericUpDown4.Size = new System.Drawing.Size(51, 34);
-            this.numericUpDown4.TabIndex = 12;
+            this.polygon_moveY.Location = new System.Drawing.Point(178, 264);
+            this.polygon_moveY.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.polygon_moveY.Name = "polygon_moveY";
+            this.polygon_moveY.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.polygon_moveY.Size = new System.Drawing.Size(51, 34);
+            this.polygon_moveY.TabIndex = 12;
             // 
             // label40
             // 
@@ -1082,14 +1082,14 @@ namespace Q5__inheretence_
             this.label41.TabIndex = 10;
             this.label41.Text = "X";
             // 
-            // numericUpDown5
+            // polygon_moveX
             // 
-            this.numericUpDown5.Location = new System.Drawing.Point(66, 264);
-            this.numericUpDown5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.numericUpDown5.Size = new System.Drawing.Size(51, 34);
-            this.numericUpDown5.TabIndex = 9;
+            this.polygon_moveX.Location = new System.Drawing.Point(66, 264);
+            this.polygon_moveX.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.polygon_moveX.Name = "polygon_moveX";
+            this.polygon_moveX.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.polygon_moveX.Size = new System.Drawing.Size(51, 34);
+            this.polygon_moveX.TabIndex = 9;
             // 
             // label42
             // 
@@ -1104,9 +1104,8 @@ namespace Q5__inheretence_
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.PowderBlue;
-            this.panel9.Controls.Add(this.button5);
             this.panel9.Controls.Add(this.label43);
-            this.panel9.Controls.Add(this.label44);
+            this.panel9.Controls.Add(this.scope_polygon_display);
             this.panel9.Location = new System.Drawing.Point(571, 0);
             this.panel9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel9.Name = "panel9";
@@ -1114,36 +1113,25 @@ namespace Q5__inheretence_
             this.panel9.TabIndex = 42;
             this.panel9.Visible = false;
             // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button5.Location = new System.Drawing.Point(91, 484);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(114, 43);
-            this.button5.TabIndex = 18;
-            this.button5.Text = "חשב";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
             // label43
             // 
             this.label43.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.label43.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label43.Location = new System.Drawing.Point(74, 65);
+            this.label43.Location = new System.Drawing.Point(35, 65);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(158, 36);
+            this.label43.Size = new System.Drawing.Size(222, 36);
             this.label43.TabIndex = 20;
-            this.label43.Text = "חישוב אורך קו";
+            this.label43.Text = "חישוב היקף מצולע";
             // 
-            // label44
+            // scope_polygon_display
             // 
-            this.label44.BackColor = System.Drawing.Color.White;
-            this.label44.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label44.Location = new System.Drawing.Point(74, 208);
-            this.label44.Name = "label44";
-            this.label44.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label44.Size = new System.Drawing.Size(149, 100);
-            this.label44.TabIndex = 19;
+            this.scope_polygon_display.BackColor = System.Drawing.Color.White;
+            this.scope_polygon_display.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.scope_polygon_display.Location = new System.Drawing.Point(74, 208);
+            this.scope_polygon_display.Name = "scope_polygon_display";
+            this.scope_polygon_display.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.scope_polygon_display.Size = new System.Drawing.Size(149, 100);
+            this.scope_polygon_display.TabIndex = 19;
             // 
             // points_amount_display
             // 
@@ -1297,8 +1285,8 @@ namespace Q5__inheretence_
             this.Polygon.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.polygon_moveY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.polygon_moveX)).EndInit();
             this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.polygon_thick)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.polygon_pointY)).EndInit();
@@ -1385,17 +1373,16 @@ namespace Q5__inheretence_
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button polygon_move_points;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.NumericUpDown polygon_moveY;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
+        private System.Windows.Forms.NumericUpDown polygon_moveX;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label scope_polygon_display;
         private System.Windows.Forms.Label points_amount_display;
         private System.Windows.Forms.TextBox polygon_color;
         private System.Windows.Forms.NumericUpDown polygon_thick;
