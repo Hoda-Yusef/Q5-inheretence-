@@ -13,6 +13,7 @@ namespace Q5__inheretence_
     public partial class calculator_display : Form
     {
         private Line p1 = new Line();
+        private Circle c1 = new Circle();
 
         public calculator_display()
         {
@@ -76,6 +77,70 @@ namespace Q5__inheretence_
         private void display_Click(object sender, EventArgs e)
         {
             toString_display.Text = "Start (" + p1.get_startX() + "," + p1.get_startY() + ")\n End (" + p1.get_endX() + "," + p1.get_endY() + ")";
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            panel4.Show();
+            panel5.Show();
+            panel6.Show();
+
+            if (centerX.Value > 0 && centerY.Value > 0 && thick_line.Value > 0 && raduis.Value > 0)
+            {
+                int x = Convert.ToInt32(centerX.Value);
+                int y = Convert.ToInt32(centerY.Value);
+                int thick = Convert.ToInt32(thick_line.Value);
+                int Raduis = Convert.ToInt32(raduis.Value);
+
+                c1.set_centerX(x);
+                c1.set_centerY(y);
+                c1.set_radius(Raduis);
+                c1.set_thick(thick);
+                c1.set_color(color.Text);
+
+                scope_display.Text = "Result :\n" + c1.scope_calculator();
+                area_display.Text = "Result :\n" + c1.area_calculator();
+
+            }
+            else
+                MessageBox.Show("ערכים שליליים או 0");
+        }
+
+        private void move_center_Click(object sender, EventArgs e)
+        {
+            if (move_centerX.Value >= 0 && move_centerY.Value >= 0)
+            {
+                int mx = Convert.ToInt32(move_centerX.Value);
+                int my = Convert.ToInt32(move_centerY.Value);
+
+                c1.set_centerX(mx + c1.get_centerX());
+                c1.set_centerY(my + c1.get_centerY());
+            }
+            else
+                MessageBox.Show("ערכים שליליים");
+        }
+
+        private void check_point_Click(object sender, EventArgs e)
+        {
+            if (checkX.Value > 0 && checkY.Value > 0)
+            {
+                int cx = Convert.ToInt32(checkX.Value);
+                int cy = Convert.ToInt32(checkY.Value);
+
+                check_display.Text= ""+c1.check_point_on_line(cx, cy);
+            }
+            else
+                MessageBox.Show("ערכים שליליים");
+        }
+
+        private void toString_Click(object sender, EventArgs e)
+        {
+            toString_dispaly.Text = "Center (" + c1.get_centerX() + "," + c1.get_centerY() + ")\nRadius : " + c1.get_radius();
         }
     }  
     

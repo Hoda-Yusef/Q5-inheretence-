@@ -13,14 +13,7 @@ namespace Q5__inheretence_
         private Point end_point;
 
         
-        public static Boolean yyyyy(int x,int y,int thick)
-        {
-            if (x > 0 && y > 0 && thick >0)
-                return true;
-            else
-                return false;
-        }
-        
+     
         public Line(int Sx,int Sy,int Ex,int Ey ,int thick,string color)
         {
             this.start_point = new Point(Sx, Sy);
