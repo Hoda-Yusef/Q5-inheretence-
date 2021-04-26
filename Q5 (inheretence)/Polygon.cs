@@ -33,7 +33,7 @@ namespace Q5__inheretence_
             
             for(int i=1;i<5;i++)
             {
-                points = points+"\nPoint "+i+"(" + this.polygon_points[i].getX() + "," + this.polygon_points[i].getY() + ")";
+                points = points+"\nPoint "+i+" (" + this.polygon_points[i].getX() + "," + this.polygon_points[i].getY() + ")";
             }
             
             return points;
