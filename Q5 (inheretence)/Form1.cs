@@ -14,6 +14,7 @@ namespace Q5__inheretence_
     {
         private Line p1 = new Line();
         private Circle c1 = new Circle();
+        private Polygon poly1 = new Polygon();
 
         public calculator_display()
         {
@@ -141,6 +142,43 @@ namespace Q5__inheretence_
         private void toString_Click(object sender, EventArgs e)
         {
             toString_dispaly.Text = "Center (" + c1.get_centerX() + "," + c1.get_centerY() + ")\nRadius : " + c1.get_radius();
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void insert_point_Click(object sender, EventArgs e)
+        {
+            if (polygon_thick.Value > 0 && polygon_pointX.Value > 0 && polygon_pointY.Value > 0)
+            {
+                int px = Convert.ToInt32(polygon_pointX.Value);
+                int py = Convert.ToInt32(polygon_pointY.Value);
+
+                if(poly1.get_numOfPoints()==5)
+                {
+                    panel7.Show();
+                    panel8.Show();
+                    panel9.Show();
+                    MessageBox.Show("מצולע הושלם ");
+                }
+                else
+                {
+                    poly1.set_polygonX(px);
+                    poly1.set_polygonY(py);
+                    poly1.set_numOfPoints(poly1.get_numOfPoints()+1);
+                    points_amount_display.Text = "Point :" + poly1.get_numOfPoints();
+                }
+
+            }
+            else
+                MessageBox.Show("ערכים שליליים או 0");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            toString_polygon_dispaly.Text = ""+poly1.ToString_polygon();
         }
     }  
     
