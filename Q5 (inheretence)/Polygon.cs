@@ -11,22 +11,18 @@ namespace Q5__inheretence_
         private Point[] polygon_points=new Point[5];
         private int numOfPoints;
 
-        public Polygon(string color,int thick)
-        {
-            this.color = color;
-            this.thick = thick;
-            
-        }
-
-        public Polygon()
+        
+        public Polygon()//הגדרת בנאי
         {
             
             this.numOfPoints = 0;
             this.polygon_points[numOfPoints] = new Point(0, 0);
+            this.color = "black";
+            this.thick = 1;
 
         }
 
-        public string ToString_polygon()
+        public string ToString_polygon()//שיטה מחזירה מחרוזת של כל הנקודות במצולע
         {
             string points="Point 0 ("+this.polygon_points[0].getX()+","+ this.polygon_points[0].getY()+")";
 
@@ -39,7 +35,7 @@ namespace Q5__inheretence_
             return points;
         }
 
-        public float scope_polygon()
+        public float scope_polygon()//שיטה לחישוב היקף של מצולע
         {
             float scope_total=0;
 
@@ -52,7 +48,7 @@ namespace Q5__inheretence_
             return scope_total;
         }
 
-        public void move_points_polygon(int x,int y)
+        public void move_points_polygon(int x,int y)//שיטה להזזת מצולע
         {
             for(int i=0;i<5;i++)
             {
@@ -61,6 +57,8 @@ namespace Q5__inheretence_
             }
         }
 
+
+        //setters and getters
         public void set_polygonX(int x)
         {
             this.polygon_points[numOfPoints] = new Point(0, 0);

@@ -1159,7 +1159,7 @@ namespace Q5__inheretence_
             this.polygon_thick.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.polygon_thick.Size = new System.Drawing.Size(51, 34);
             this.polygon_thick.TabIndex = 39;
-            this.polygon_thick.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            
             // 
             // polygon_pointY
             // 

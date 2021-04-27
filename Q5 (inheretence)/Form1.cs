@@ -12,6 +12,8 @@ namespace Q5__inheretence_
 {
     public partial class calculator_display : Form
     {
+        //בניית אובייקטים
+
         private Line p1 = new Line();
         private Circle c1 = new Circle();
         private Polygon poly1 = new Polygon();
@@ -23,9 +25,10 @@ namespace Q5__inheretence_
 
         
 
-        private void accept_line_Click(object sender, EventArgs e)
+        private void accept_line_Click(object sender, EventArgs e)//כפתור לקבלת קו
         {
            
+            //בדיקה אם הערכים לא שליליים
             if (sx.Value > 0 && sy.Value > 0 && ex.Value > 0 && ey.Value > 0 && thick.Value > 0)
             {
                 panel1.Show();
@@ -53,14 +56,15 @@ namespace Q5__inheretence_
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)//כפתור להצגת אורך קו
         {
             line_length.Text = "Length :\n"+ p1.line_length();
 
         }
 
-        private void move_Click(object sender, EventArgs e)
+        private void move_Click(object sender, EventArgs e)//כפתור להזזת קו
         {
+            //בדיקה אם הערכים לא שליליים
             if (moveX.Value >= 0 && moveY.Value >= 0)
             {
                 int mx = Convert.ToInt32(moveX.Value);
@@ -75,22 +79,20 @@ namespace Q5__inheretence_
                 MessageBox.Show("ערך שלילי");
         }
 
-        private void display_Click(object sender, EventArgs e)
+        private void display_Click(object sender, EventArgs e)//to string of line
         {
             toString_display.Text = "Start (" + p1.get_startX() + "," + p1.get_startY() + ")\n End (" + p1.get_endX() + "," + p1.get_endY() + ")";
         }
 
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
+       
 
-        }
-
-        private void button6_Click(object sender, EventArgs e)
+        private void button6_Click(object sender, EventArgs e)//כפתור לקבלת מעגל
         {
             panel4.Show();
             panel5.Show();
             panel6.Show();
 
+            //בדיקה אם הערכים לא שליליים
             if (centerX.Value > 0 && centerY.Value > 0 && thick_line.Value > 0 && raduis.Value > 0)
             {
                 int x = Convert.ToInt32(centerX.Value);
@@ -112,8 +114,9 @@ namespace Q5__inheretence_
                 MessageBox.Show("ערכים שליליים או 0");
         }
 
-        private void move_center_Click(object sender, EventArgs e)
+        private void move_center_Click(object sender, EventArgs e)//כפתור להזזת מעגל
         {
+            //בדיקה אם הערכים לא שליליים
             if (move_centerX.Value >= 0 && move_centerY.Value >= 0)
             {
                 int mx = Convert.ToInt32(move_centerX.Value);
@@ -126,8 +129,9 @@ namespace Q5__inheretence_
                 MessageBox.Show("ערכים שליליים");
         }
 
-        private void check_point_Click(object sender, EventArgs e)
+        private void check_point_Click(object sender, EventArgs e)//בדיקה אם הנקודה שהתקבלה נמצאת במעגל
         {
+            //בדיקה אם הערכים לא שליליים
             if (checkX.Value > 0 && checkY.Value > 0)
             {
                 int cx = Convert.ToInt32(checkX.Value);
@@ -139,23 +143,22 @@ namespace Q5__inheretence_
                 MessageBox.Show("ערכים שליליים");
         }
 
-        private void toString_Click(object sender, EventArgs e)
+        private void toString_Click(object sender, EventArgs e)//to string circle
         {
             toString_dispaly.Text = "Center (" + c1.get_centerX() + "," + c1.get_centerY() + ")\nRadius : " + c1.get_radius();
         }
 
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
+       
 
-        }
-
-        private void insert_point_Click(object sender, EventArgs e)
+        private void insert_point_Click(object sender, EventArgs e)//כפתור לקבלת נקודות למצולע
         {
+            //בדיקה אם הערכים לא שליליים
             if (polygon_thick.Value > 0 && polygon_pointX.Value > 0 && polygon_pointY.Value > 0)
             {
                 int px = Convert.ToInt32(polygon_pointX.Value);
                 int py = Convert.ToInt32(polygon_pointY.Value);
 
+                //אם מספר הנקודות הגיע למספר הנקבע
                 if(poly1.get_numOfPoints()==5)
                 {
                     panel7.Show();
@@ -164,6 +167,8 @@ namespace Q5__inheretence_
                     MessageBox.Show("מצולע הושלם ");
                     scope_polygon_display.Text = "Result :\n" + poly1.scope_polygon();
                 }
+
+                //אם לא ממשיכים להוסיף נקודות
                 else
                 {
                     poly1.set_polygonX(px);
@@ -177,13 +182,15 @@ namespace Q5__inheretence_
                 MessageBox.Show("ערכים שליליים או 0");
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)//TO STRING POLYGON
         {
             toString_polygon_dispaly.Text = ""+poly1.ToString_polygon();
         }
 
-        private void polygon_move_points_Click(object sender, EventArgs e)
+        private void polygon_move_points_Click(object sender, EventArgs e)//כפתור להזזת מצולע
         {
+
+            //בדיקה אם הערכים לא שליליים
             if (polygon_moveX.Value >= 0 && polygon_moveY.Value >= 0)
             {
                 int x = Convert.ToInt32(polygon_moveX.Value);

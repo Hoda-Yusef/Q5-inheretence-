@@ -14,6 +14,7 @@ namespace Q5__inheretence_
 
         
      
+        //הגדרת בנאי
         public Line(int Sx,int Sy,int Ex,int Ey ,int thick,string color)
         {
             this.start_point = new Point(Sx, Sy);
@@ -22,6 +23,7 @@ namespace Q5__inheretence_
             this.color = color;
         }
 
+        //הגדרת בנאי
         public Line()
         {
             this.start_point=new Point(0,0);
@@ -30,11 +32,13 @@ namespace Q5__inheretence_
             this.color = "black";
         }
 
-        public float line_length()
+        public float line_length()//שיטה לחישוב אורך קו
         {
             return (float)Math.Sqrt((start_point.getX() - end_point.getX()) *(start_point.getX() - end_point.getX())+ (start_point.getY()-end_point.getY())* (start_point.getY() - end_point.getY()));
         }
 
+
+        //SETTERS AND GETTERS
         public void set_startX(int sx)
         {
             this.start_point.setX(sx);

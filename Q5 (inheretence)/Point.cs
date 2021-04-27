@@ -10,12 +10,14 @@ namespace Q5__inheretence_
         private int y;
 
 
-        public Point(int x,int y)
+        public Point(int x,int y)//הגדרת בנאי
         {
             this.x = x;
             this.y = y;
         }
 
+
+        //SETTERS AND GETTERS
         public void setX(int x)
         {
             this.x = x;

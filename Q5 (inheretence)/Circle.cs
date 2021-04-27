@@ -11,7 +11,7 @@ namespace Q5__inheretence_
         private Point center_point;
         private float radius;
 
-
+        //הגדרת בנאי
         public Circle(float radius,int thick,int centerX,int centerY,string color)
         {
             this.radius = radius;
@@ -20,6 +20,7 @@ namespace Q5__inheretence_
             this.color = color;
         }
 
+        //הגדרת בנאי
         public Circle()
         {
             this.radius = 0;
@@ -29,17 +30,17 @@ namespace Q5__inheretence_
         }
 
 
-        public float scope_calculator()
+        public float scope_calculator()//חישוב היקף של מעגל
         {
             return (float)(2 * 3.14 * this.radius);
         }
 
-        public float area_calculator()
+        public float area_calculator()//חישוב שטח של מעגל
         {
             return (float)(3.14 * this.radius * this.radius);
         }
 
-        public Boolean check_point_on_line(int x,int y)
+        public Boolean check_point_on_line(int x,int y)//בדיקה אם נקודה נמצאת במעגל
         {
             if ((float)Math.Sqrt((center_point.getX() - x) * (center_point.getX() - x) + (center_point.getY() - y) * (center_point.getY() - y)) == this.radius)
             {
@@ -50,6 +51,7 @@ namespace Q5__inheretence_
         }
 
 
+        //SETTERS AND GETTERS
         public void set_radius(float radius)
         {
             this.radius = radius;
