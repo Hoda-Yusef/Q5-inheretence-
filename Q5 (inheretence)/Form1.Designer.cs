@@ -1,4 +1,4 @@
-﻿
+﻿//Hoda Khier + Yusef Aborokn 44/5
 namespace Q5__inheretence_
 {
     partial class calculator_display
